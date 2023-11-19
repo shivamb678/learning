@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-19T13:21:09 IST" name="Suite" finished-at="2023-11-19T13:21:22 IST" duration-ms="12556">
+  <suite started-at="2023-11-26T22:44:56 IST" name="Default suite" finished-at="2023-11-26T22:45:17 IST" duration-ms="20937">
     <groups>
     </groups>
-    <test started-at="2023-11-19T13:21:09 IST" name="NegativeTest" finished-at="2023-11-19T13:21:22 IST" duration-ms="12556">
-      <class name="pramoddutta.Dutta1">
-        <test-method is-config="true" signature="openbrowser()[pri:0, instance:pramoddutta.Dutta1@222545dc]" started-at="2023-11-19T13:21:09 IST" name="openbrowser" finished-at="2023-11-19T13:21:18 IST" duration-ms="8482" status="PASS">
+    <test started-at="2023-11-26T22:44:56 IST" name="Default test" finished-at="2023-11-26T22:45:17 IST" duration-ms="20937">
+      <class name="pramoddutta.Diwali">
+        <test-method is-config="true" signature="openbrowser()[pri:0, instance:pramoddutta.Diwali@222545dc]" started-at="2023-11-26T22:44:56 IST" name="openbrowser" finished-at="2023-11-26T22:45:09 IST" duration-ms="13200" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openbrowser -->
-        <test-method signature="NegativeTC()[pri:0, instance:pramoddutta.Dutta1@222545dc]" started-at="2023-11-19T13:21:18 IST" name="NegativeTC" finished-at="2023-11-19T13:21:22 IST" duration-ms="3558" status="PASS">
+        <test-method signature="Testcase()[pri:0, instance:pramoddutta.Diwali@222545dc]" started-at="2023-11-26T22:45:09 IST" name="Testcase" finished-at="2023-11-26T22:45:17 IST" duration-ms="7191" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NegativeTC -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:pramoddutta.Dutta1@222545dc]" started-at="2023-11-19T13:21:22 IST" name="closebrowser" finished-at="2023-11-19T13:21:22 IST" duration-ms="446" status="PASS">
+        </test-method> <!-- Testcase -->
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:pramoddutta.Diwali@222545dc]" started-at="2023-11-26T22:45:17 IST" name="closebrowser" finished-at="2023-11-26T22:45:17 IST" duration-ms="372" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closebrowser -->
-      </class> <!-- pramoddutta.Dutta1 -->
-    </test> <!-- NegativeTest -->
-  </suite> <!-- Suite -->
+      </class> <!-- pramoddutta.Diwali -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

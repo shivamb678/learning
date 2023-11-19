@@ -1,16 +1,19 @@
 package pramoddutta;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class Dutta1 
+public class Diwali 
 {
 
 	
@@ -30,46 +33,63 @@ public class Dutta1
 	@Owner("Shivam")
 	
 	@Test
-	public void NegativeTC()
+	public void Testcase()
 	{
-		// TODO Auto-generated method stub
-		 
-		
+		 	
 		
 		//loading the url
 		
 		//input UN
 		WebElement username = driver.findElement(By.id("login-username"));
-		username.sendKeys("abc@gmail.com");
+		username.sendKeys("shivamb678@gmail.com");
 		//input PW
 		WebElement pw = driver.findElement(By.id("login-password"));
-		pw.sendKeys("123"); 
+		pw.sendKeys("Test@123"); 
 		//click button
 		WebElement button = driver.findElement(By.id("js-login-btn"));
 		button.click();
 		
-		try {
+		/*try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		*/
+		
+		
 		
 		//printing error
-		WebElement error_print = driver.findElement(By.id("js-notification-box-msg"));
-		System.out.println(error_print.getText());
+		//WebElement error_print = driver.findElement(By.id("js-notification-box-msg"));
 		
-		//Assert
-		Assert.assertEquals(error_print.getText(), "Your email, password, IP address or location did not match");
+		//Explicit wait Negative case
+		
+		/*WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.textToBePresentInElement(error_print, "Your email, password, IP address or location did not match"));
+		
+		System.out.println("2 -->" + error_print.getText());
+		*/
+		
+		//Explicit wait Positive case
+		
+		//
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.textToBe(By.xpath("//span[@data-qa='lufexuloga']"), "Shivam Bhardwaj"));
+		
+		WebElement name = driver.findElement(By.xpath("//span[@data-qa='lufexuloga']"));
+		
+		System.out.println("2 -->" + name.getText());
 		
 		
-
 	}
+	
 	
 	@AfterTest
 	public void closebrowser()
 	{
 		driver.quit();
 	}
+	
 
 }
