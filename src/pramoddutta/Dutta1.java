@@ -6,26 +6,44 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class Dutta1 {
 
+	
+	
+	WebDriver driver; 
+	
+	@BeforeTest
+	public void openbrowser()
+	{
+		
+		ChromeOptions option = new ChromeOptions();
+		 option.addArguments("start-maximized");
+		 driver = new ChromeDriver(option);
+		driver.get("https://app.vwo.com/");
+		
+	}
+	
+	@Owner("Shivam")
+	
 	@Test
 	public void NegativeTC()
 	{
 		// TODO Auto-generated method stub
-		ChromeOptions option = new ChromeOptions();
-		 option.addArguments("start-maximized"); 
-		WebDriver driver = new ChromeDriver(option);
+		 
+		
 		
 		//loading the url
-		driver.get("https://app.vwo.com/");
+		
 		//input UN
 		WebElement username = driver.findElement(By.id("login-username"));
 		username.sendKeys("abc@gmail.com");
 		//input PW
 		WebElement pw = driver.findElement(By.id("login-password"));
-		pw.sendKeys("123");
+		pw.sendKeys("123"); 
 		//click button
 		WebElement button = driver.findElement(By.id("js-login-btn"));
 		button.click();
@@ -43,10 +61,15 @@ public class Dutta1 {
 		
 		//Assert
 		Assert.assertEquals(error_print.getText(), "Your email, password, IP address or location did not match");
-		driver.quit();
 		
 		
 
+	}
+	
+	@AfterTest
+	public void closebrowser()
+	{
+		driver.quit();
 	}
 
 }
